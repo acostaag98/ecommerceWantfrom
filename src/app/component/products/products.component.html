@@ -1,0 +1,42 @@
+<div class='card-top container-fluid'>
+    <div class='container d-flex'>
+        <button class='item btn btn-primary'>
+            <a>
+                <img src='https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_200,q_75,w_200/https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/greenville/Beer_Icon_41015a19-b0f2-4e93-b3f4-949e790c4b13.png' alt=''>
+                <h6>All products</h6>
+            </a>
+        </button>
+        <button class='item btn btn-primary'>
+            <a>
+                <img src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_200,q_75,w_200/https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/greenville/Beer_Icon_41015a19-b0f2-4e93-b3f4-949e790c4b13.png" alt="">
+                <h6>Regular Beers</h6>
+            </a>
+        </button>
+        <button class='item btn btn-primary'>
+            <a>
+                <img src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_200,q_75,w_200/https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/greenville/Beer_Icon_41015a19-b0f2-4e93-b3f4-949e790c4b13.png" alt="">
+                <h6>Black Beers</h6>
+            </a>
+        </button>
+        <button class='item btn btn-primary'>
+            <a>
+                <img src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_200,q_75,w_200/https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/greenville/Beer_Icon_41015a19-b0f2-4e93-b3f4-949e790c4b13.png" alt="">
+                <h6>Special Beers</h6>
+            </a>
+        </button>
+    </div>
+</div>
+
+<div class='container'>
+    <div class='row'>
+        <ng-container *ngFor='let item of productList'>
+            <div class='card col-md-3'>
+                <img src='{{item.image_url}}' alt=''>
+                <h5 style='white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;'>{{item.name}}</h5>
+                <p style='white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch;'>{{item.description}}</p>
+                <p><strong>Price: </strong>${{item.abv}}</p>
+                <button class='btn btn-primary' (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

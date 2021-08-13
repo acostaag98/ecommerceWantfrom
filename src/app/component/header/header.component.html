@@ -1,0 +1,70 @@
+<header>
+    <div class="navbar bg-primary shadow-sm">
+        <button routerLink='products' class='btn btn-primary'>
+            <div class="navbar-brand align-item-center d-flex">
+                <i style='font-size: 30px;'class='fas fa-shipping-fast'>&nbsp;</i>
+                <strong style='font-size: 30px;'>Ecommerce</strong>
+            </div>
+        </button>
+        <button routerLink='cart' class='btn btn-primary'>
+            <i style='font-size: 30px;' class='fas fa-cart-plus'></i>
+            <div style='font-size: 10px;' class='badge bg-danger'>{{totalItem}}</div>
+        </button>
+    </div>
+    <body>
+        <div id="navbar-wrapper">
+            <header>
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <div class="container-fluid">
+                        <div id="navbar-collapse" class="collapse navbar-collapse">
+                            <form class="navbar-form navbar-left" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <aside id="sidebar">
+                    <ul id="sidemenu" class="sidebar-nav">
+                        <li>
+                            <a routerLink='/products'>
+                                <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
+                                <span class="sidebar-title">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink='/offers'>
+                                <span class="sidebar-icon"><i class="fa fa-angellist"></i></span>
+                                <span class="sidebar-title">Offers</span>
+                                <b class="caret"></b>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="sidebar-icon"><i class="fa fa-search"></i></span>
+                                <input class="sidebar-title" style='width: 224px;' placeholder="Search">
+                                <b class="caret"></b>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink='/user'>
+                                <span class="sidebar-icon"><i class="fa fa-user"></i></span>
+                                <span class="sidebar-title">Profile</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>            
+            </div>
+            <main id="page-content-wrapper" role="main">
+            </main>
+        </div> 
+    </body>
+</header>
